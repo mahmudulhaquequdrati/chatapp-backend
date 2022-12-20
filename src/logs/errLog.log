@@ -1,0 +1,3 @@
+20221207	22:57:51	920be384-6709-4cfc-9c97-b8790c938b1f	Error: ENOENT: no such file or directory, stat 'C:\Users\coder\OneDrive\Desktop\sms2.0\server\views\not.html'	GET	/	undefined
+20221207	22:57:54	5acf36f6-2f1e-483a-ad57-d182649b48e9	Error: ENOENT: no such file or directory, stat 'C:\Users\coder\OneDrive\Desktop\sms2.0\server\views\not.html'	GET	/favicon.ico	undefined
+20221211	19:10:49	bc5832cd-ecca-4e27-8af3-6d885285cdce	SyntaxError: Unexpected token } in JSON at position 61	POST	/api/v1/users/register	undefined
