@@ -2,33 +2,37 @@ const mongoose = require("mongoose");
 
 const messageSchema = new mongoose.Schema(
   {
-    message: {
+    messages: {
+      type: Array,
+      required: true,
+    },
+    conversationId: {
       type: String,
       required: true,
     },
-    channelId: {
-      type: String,
-      required: true,
-    },
-    userId: {
-      type: String,
-      required: true,
-    },
-    tags: {
-      type: Array,
-    },
-    assaignee: {
-      type: Array,
-    },
-    sharedpeople: {
-      type: Array,
-    },
-    files: {
-      type: Array,
-    },
-    reactions: {
-      type: Array,
-    },
+    // channelId: {
+    //   type: String,
+    //   required: true,
+    // },
+    // userId: {
+    //   type: String,
+    //   required: true,
+    // },
+    // tags: {
+    //   type: Array,
+    // },
+    // assaignee: {
+    //   type: Array,
+    // },
+    // sharedpeople: {
+    //   type: Array,
+    // },
+    // files: {
+    //   type: Array,
+    // },
+    // reactions: {
+    //   type: Array,
+    // },
   },
   {
     timestamps: true,

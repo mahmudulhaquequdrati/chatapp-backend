@@ -1,7 +1,7 @@
 const express = require("express");
 const {
   getAllMessages,
-  getMessageBySlug,
+  getMessageById,
   createMessage,
   updateMessage,
   deleteMessage,
@@ -10,9 +10,9 @@ const {
 const router = express.Router();
 
 router.get("/all-messages", getAllMessages);
-router.get("/all-messages/:slug", getMessageBySlug);
+router.get("/all-messages/:id", getMessageById);
 router.post("/create-message", createMessage);
-router.put("/update-message/:slug", updateMessage);
-router.delete("/delete-message/:slug", deleteMessage);
+router.put("/update-message/:id", updateMessage);
+router.delete("/delete-message/:id", deleteMessage);
 
 module.exports = router;

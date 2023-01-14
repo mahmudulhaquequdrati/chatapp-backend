@@ -6,11 +6,6 @@ const channelSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    slug: {
-      type: String,
-      required: true,
-    },
-
     groupId: {
       type: String,
       required: true,

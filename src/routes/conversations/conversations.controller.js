@@ -17,6 +17,25 @@ const getAllConversations = async (req, res) => {
   }
 };
 
+const getConversationByTags = async (req, res) => {
+  try {
+    const { tag } = req.params;
+    const conversation = await Conversation.find({
+      tags: {
+        $in: [tag],
+      },
+    });
+    console.log(conversation);
+    res.status(200).json({ status: "success", conversation: conversation });
+  } catch (err) {
+    res.status(500).json({
+      status: "error",
+      message: err.message,
+    });
+  }
+};
+
 module.exports = {
   getAllConversations,
+  getConversationByTags,
 };

@@ -6,10 +6,6 @@ const groupSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    slug: {
-      type: String,
-      trim: true,
-    },
   },
   {
     timestamps: true,

@@ -15,9 +15,12 @@ const getAllMessages = async (req, res) => {
   }
 };
 
-const getMessageBySlug = async (req, res) => {
+const getMessageById = async (req, res) => {
   try {
-    const message = await Message.findOne({ slug: req.params.slug });
+    const { id } = req.params;
+    const message = await Message.findOne({
+      conversationId: req.params.id,
+    }).exec();
     res.status(200).json({ status: "success", message: message });
   } catch (err) {
     res.status(500).json({
@@ -69,7 +72,7 @@ const deleteMessage = async (req, res) => {
 
 module.exports = {
   getAllMessages,
-  getMessageBySlug,
+  getMessageById,
   createMessage,
   updateMessage,
   deleteMessage,
