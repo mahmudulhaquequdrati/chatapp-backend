@@ -2,8 +2,8 @@ const mongoose = require("mongoose");
 
 const controllerSchema = new mongoose.Schema(
   {
-    channelId: {
-      type: mongoose.Schema.Types.ObjectId,
+    channelId : {
+      type: String,
       required: true,
     },
     smsType: {
