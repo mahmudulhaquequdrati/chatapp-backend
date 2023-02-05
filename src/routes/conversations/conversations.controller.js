@@ -34,8 +34,24 @@ const getConversationByTags = async (req, res) => {
     });
   }
 };
+const getConversationByChannelId = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const conversation = await Conversation.find({
+     channelId : id
+    });
+    console.log(conversation,id);
+    res.status(200).json({ status: "success", conversation: conversation });
+  } catch (err) {
+    res.status(500).json({
+      status: "error",
+      message: err.message,
+    });
+  }
+};
 
 module.exports = {
   getAllConversations,
   getConversationByTags,
+  getConversationByChannelId
 };
